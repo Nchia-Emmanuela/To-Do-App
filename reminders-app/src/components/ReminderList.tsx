@@ -5,9 +5,11 @@ interface ReminderListProps{
     itmes : Reminder[]
 }
 
-function ReminderList(props: ReminderListProps) {
+function ReminderList({itmes}: ReminderListProps) {
   return (
-    <div>ReminderList</div>
+    <ul>
+      {itmes.map(item => <li key = {item.id}>{item.title}</li>)}
+    </ul>
   )
 }
 
